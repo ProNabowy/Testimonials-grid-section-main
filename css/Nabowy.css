@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding: 0 10px;
+  margin: 0 auto;
+}
+/* Start Madia */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Madia */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #edf2f8;
+}
+body .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "Daniel Daniel Jon Kira" "Jeanetta Patrick Patrick Kira";
+  gap: 30px;
+}
+.container > div {
+  border-radius: 20px;
+  padding: 20px 20px 10px 20px;
+}
+.container > div p {
+  opacity: 0.7;
+}
+.container > div h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.container > div h2 + p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.container > div h3 {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.container > div h3 + p {
+  font-size: 10px;
+}
+.container .head {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+div .head img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  body .container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "Daniel Daniel Daniel Daniel" "Jon Jon Jon Jon " "Kira Kira Kira Kira" "Jeanetta Jeanetta Jeanetta Jeanetta" " Patrick Patrick Patrick Patrick";
+    margin: 50px 0;
+  }
+  body .container .head {
+    justify-content: center;
+  }
+}
+.Danial {
+  grid-area: Daniel;
+  background-color: #733fc8;
+  color: white;
+}
+.Jonathan {
+  grid-area: Jon;
+  background-color: #49556b;
+  color: white;
+}
+.Kira {
+  grid-area: Kira;
+  background-color: white;
+}
+.Jeanetta {
+  grid-area: Jeanetta;
+  background-color: white;
+  color: #4b5463;
+}
+.Patirck {
+  grid-area: Patrick;
+  background-color: #18202d;
+  color: white;
+}
